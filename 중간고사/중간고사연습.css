@@ -1,0 +1,56 @@
+*{
+    /*문서 전체를 적용하는 것이다*/
+    background-color: aliceblue; /*배경화면을 이야기함*/
+    color: aliceblue; /*글자색*/
+    font-size: 18px; /*글자크기*/
+    font-weight: bold; /*글자 굵기*/
+    width: auto; /*가로 길이 %또는px사용*/
+    height: auto; /*세로 길이 px사용*/
+    border: solid 10px black; /*테두리, 실선, 10px크기, 검은색*/
+    border-color: black; /*테두리 색, 4개의 색일때 위 오른쪽 아래 왼쪽이다*/
+    border-style: double; /*테두리 디자인(이중선)*/
+    border-width: 0px; /*테두리 굵기*/
+    padding: 1px 2px 3px 4px; /*테두리 안쪽 여백, 위 오른쪽 아래 왼쪽*/
+    margin: 1px 2px 3px 4px; /*테두리 바깥쪽 여백, 위 오른쪽 아래 왼쪽*/
+    padding: 1px 2px; /*padding과 margin과 border-color에서 2개만 있을때는 위아래 양옆 으로 적용된다*/
+}
+
+#s1 {
+    /*아이디를 말하는 것이다*/
+    text-align: center; /*글자 가운데 정렬*/
+    font-family: "돋움체"; /*글꼴 변경*/
+    list-style-type: square; /*ul 순서없는,리스트 타입을 사각형으로 바꾸는 것*/
+    list-style-type: lower-roman; /*ol 순서있는,리스트 타입을 로마소문자로 바꾸는 것*/
+    float: left; /*float는 적용한 구역 밑으로 전부 적용*/
+    clear: both; /*float를 적용해제 하고 싶은 구역에 사용한다, both는 양쪽다 해제*/
+    box-sizing: border-box; /*실제 넓이와 높이 고정, 여백을 주더라도 그 지정된 높이와 넓이만 표시됨*/
+}
+
+.s1 {
+    /*클래스를 말하는 것이다*/
+}
+
+/*내부 스타일 이용시
+<head>
+    <style>
+        여기 안에서 작성
+    </style>
+<head>
+*/
+
+section > article {
+    /*부모 자식 관계, 보통은 section안에 article이 있으므로*/
+}
+body article {
+    /*조상 자손 관계, body안에 article이 있으므로*/
+}
+a:link, a:visited, a:hover, a:active {
+    /*link는 방문하기전, visited는 방문한 후, hover는 마우스를 올려 놓았을때, active는 클릭했을때*/
+}
+a{
+    display: none; /*보이지 않음*/
+    display: block; /*블록으로 설정을 했고 가로 세로 길이 설정 가능*/
+    display: inline; /*가로 세로 길이 지정 불가*/
+    display: inline-block; /* 인라인과 블록의 중간형태 */
+    text-decoration: none; /*그 문장 꾸미는 것,none는 하이퍼 링크 밑줄없애는것*/
+}

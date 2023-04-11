@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>컴퓨터 공학부 202295035 홍요한</title>
+    
+    <script>
+        // 첫 번째 = 버튼 누루면 호출되는 함수
+        function show1() {
+            // 첫 번째 입력 숫자 값을 가지고 와서 num1 변수에 저장.
+            var num1 = Form1.num1.value;
+            // 두 번째 입력 숫자 값을 가지고 와서 num2 변수에 저장.
+            var num2 = Form1.num2.value;
+
+            // 두 값의 합계 계산.
+            var sum = num1+num2;
+
+            //결과 출력 - 이름이 result1인 곳에 합계 출력
+            Form1.result1.value = sum;
+        }
+
+        // 두 번째 = 버튼 누루면 호출되는 함수
+        function show2() {
+            // 첫 번째 입력 숫자 값을 가지고 정수형으로 변환하여 num1 변수에 저장.
+            var num1 = parseInt(Form2.num1.value);
+            var num2 = parseInt(Form2.num2.value);
+
+            var sum = num1+num2;
+
+            Form2.result1.value = sum;
+        }
+    </script>
+
+</head>
+<body>
+    <h1>JAVASCRIPT 연산자</h1>
+
+    <h2>text 에 입력한 값은 문자로 인식한다.</h2>
+    <form name="Form1">
+        <input type="text" name="num1" size="6">
+        +
+        <input type="text" name="num2" size="6">
+        <input type="button" value=" = " onclick="show1()">
+        <input type="text" name="result1" size="6">
+    </form>
+
+    <hr>
+
+    <h2>parseInt 사용하여 숫자로 변환시킨다.</h2>
+    <form name="Form2">
+        <input type="text" name="num1" size="6">
+        +
+        <input type="text" name="num2" size="6">
+        <input type="button" value=" = " onclick="show2()">
+        <input type="text" name="result1" size="6">
+    </form>
+</body>
+</html>

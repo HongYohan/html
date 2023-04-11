@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>커피주문 시스템 - 본인이름</title>
+
+        <!--css 추가-->
+		<link rel="stylesheet" type="text/css" href="coffee.css">
+
+		<script>
+			// 주문하기 함수
+			function show() {
+				// 각 변수 선언.
+				var coffee = form1.coffee_s.value; // 커피 종류 가져오기
+				var count = parseInt(form1.count.value); // 커피 사이즈 가져오기
+				var c_size = form1.c_size.value; // 커피 수량 가져오기
+				var str = "";
+				var price = 0;
+
+				str = coffee+" "+ c_size+"사이즈 " +count +"잔은 "
+
+				switch (coffee) {
+					case '에스프레소' :
+						coffee = 2000;
+						break;
+					case '카푸치노' :
+						coffee = 3000;
+						break;
+					case '카페라떼' :
+						coffee = 3500;
+						break;
+					//default : //나머지
+				}
+				//alert(coffee)
+
+
+				switch (c_size) {
+					case 'Tall' :
+						c_size = 0;
+						break;
+					case 'Grande' :
+						c_size = 500;
+						break;
+					case 'Venti' :
+						c_size = 1000;
+						break;
+				}
+				//alert(c_size)
+
+				price = (coffee + c_size)*count;
+
+				// 선택 사항을 체크 했는지 판단하는 구문
+				var Choice = document.form1.getElementsByClassName("Choice");
+				str=str+ "총 "+price+"원입니다.\n" +"선택사항 : " 
+				for(i = 0; i < Choice.length; i++) {
+                	if (Choice[i].checked == true) {
+                    	str=str+Choice[i].value +" ";
+                	}
+            	}
+
+
+                // 메세지 창으로 결과 출력.
+				alert(str);
+
+			}
+			
+			// 수량 증가 버튼 함수
+			function showup(){
+				// var count= form1.count.value;
+				// count++;
+				// form1.count.value=count
+
+				form1.count.value = parseInt(form1.count.value)+1; //+1의 값
+			}
+			
+			// 수량 감소 버튼 함수
+			function showdown(){
+				if(form1.count.value>1){
+				form1.count.value=parseInt(form1.count.value)-1; //-1의 값
+				}
+			}
+			
+			// 초기화 함수
+			function clearShow() {
+			form1.reset()
+			}
+		</script>
+	</head>
+
+	<body>
+		<div class="box1"><h1>커피주문하기</h1></div>
+		<form name="form1">
+			<div class="box2"> 
+				<h2>[메뉴]</h2>
+				<ul>
+					<li>에스프레소 : 2000원</li>
+					<li>카푸치노  : 3000원</li>
+					<li>카페라떼  : 3500원</li>
+				</ul>
+			</div>
+
+			<div class="box3"> 
+				커피선택 : 
+				<select name="coffee_s">
+					<option value="에스프레소">에스프레소</option>
+					<option value="카푸치노">카푸치노</option>
+					<option value="카페라떼">카페라떼</option>
+				</select>
+				<br><br>
+
+				사이즈 : 
+				<input type="radio" name="c_size" id="c_size_t" value="Tall" checked> 
+				<label for="c_size_t">Tall &nbsp;&nbsp;&nbsp;&nbsp;</label> 
+				
+				<input type="radio" name="c_size" id="c_size_g" value="Grande" > 
+				<label for="c_size_g"> Grande(500원)&nbsp;&nbsp;&nbsp;&nbsp;</label>
+				
+				<input type="radio" name="c_size" id="c_size_v" value="Venti" > 
+				<label for="c_size_v"> Venti(1000원)</label>									
+				<br><br>				
+
+				수량 : 
+				<input type="button" value="-" onclick="showdown()">
+				<input type="text" name="count" size="3" value="1" placeholder="1" readonly>
+				<input type="button" value="+" onclick="showup()">
+				<br><br>
+
+				선택사항 : 
+				<input type="checkbox" name="Syrup" id="Syrup" class="Choice" value="시럽"> 
+				<label for="Syrup">시럽&nbsp;&nbsp;&nbsp;</label>
+				
+				<input type="checkbox" name="Sugar" id="Sugar" class="Choice" value="설탕"> 
+				<label for="Sugar">설탕&nbsp;&nbsp;&nbsp;</label> 
+				 
+				<input type="checkbox" name="Shot" id="Shot"  class="Choice" value="샷추가">
+				<label for="Shot">샷추가&nbsp;&nbsp;&nbsp;</label>
+				 
+				<input type="checkbox" name="ice" id="ice"  class="Choice"  value="얼음">
+				<label for="ice">얼음</label>
+			</div>
+			<br><br>
+			
+			<div class="box4"> 
+				<input type="button" class="btn" value="주문하기" onclick="show()">
+				<input type="button" class="btn" value="취소"  onclick="clearShow();">
+			</div>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,34 @@
+.box1 {
+    border-radius: 10px;
+    background-color : olive;
+    padding: 10px; 
+    margin : 10px;
+    width: 400px;
+    height: 20px; 
+    color : white;
+    text-align : center;
+}
+
+.box2 {		 
+    padding: 10px; 
+    margin : 10px;
+    width: 400px; 
+    text-align : center;
+}
+
+#msg {
+    width : 400px;
+    height : 230px;
+    margin : 10px;
+    padding: 10px;  
+    border: 1px solid olive;
+    font-size : 15px;
+    font-weight : bold;
+    line-height : 25px;
+    text-align : center;
+}
+
+select, input[type=button] {
+    height : 30px;
+    width : 70px;
+}			

@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>구구단 - 본인이름</title>
+		<!--css 추가-->
+		<link rel="stylesheet" href="gugudan.css">
+
+		<script>	 
+			// 구구단 출력 함수
+			function showDan() {
+				// 단 선택
+				var str ='';
+				var dan = parseInt(myform.dan.value);
+				for (i=1;i<10;i++){
+					str=str+ dan+"x"+i+"="+(dan*i)+"<br>"
+				}
+
+				if(myform.dan.value == ""){
+					alert("단을 입력하시오.")
+				}
+				
+				// 결과 출력
+				else{
+					document.getElementById("result").innerHTML=str
+				}
+				
+			}
+
+			// 지우기 함수
+			function showClear() {
+				location.reload()
+			}
+		</script>
+	</head>
+	
+	<body>
+		<form name="myform">
+			<div class="box1">
+				구구단 학습하기
+			</div>
+			<div class="box2">
+				<!--구구단 선택 폼-->
+				<select name="dan">
+					<option value="">단선택</option>
+					<option value="1" >1단</option>
+					<option value="2" >2단</option>
+					<option value="3" >3단</option>
+					<option value="4" >4단</option>
+					<option value="5" >5단</option>
+					<option value="6" >6단</option>
+					<option value="7" >7단</option>
+					<option value="8" >8단</option>
+					<option value="9" >9단</option>
+				</select>
+
+				<!--버튼 영역-->
+				<input type="button" value="단보기" onclick="showDan()">
+				<input type="button" value="지우기" onclick="showClear()">
+			</div>
+			
+			<!--결과 출력 영역-->
+			<div id="msg">
+				<div id="result"></div>
+			</div>	
+		</form>
+	</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>컴퓨터공학부 202295035 홍요한</title>
+
+            <!--주석처리 단축키는 ctrl k c, ctrl k u는 주석처리 풀기-->
+            <!-- 보통 디자인은 head안에 작성-->
+            <!--외부 스타일 시트-->
+        <link rel="stylesheet" type="text/css" href="03.css">
+            <!--스타일을 링크한껀데 스타일 형식의 같은 폴더에있는 03.css를 사용
+            외부 스타일은 공통된 디자인일때 사용-->
+            <!--스타일 우선순위는 인라인>내부>외부이다, 내부하고 외부 같이 사용가능 -->
+
+            <!--내부 스타일 시트-->
+        <style>
+            /*html 태그에 디자인 적용*/
+            section {
+                background-color: cadetblue;
+            }
+            /* id에 디자인 적용, id가 없을때는 id를 만들고 디자인 해야한다, id는 중복 x 
+            color는 글자색을 말하는것이다*/
+            #s1 {
+                color: blue; /*글자색*/
+                width: 100%; /* width는 브라우저 크기에 따라 달라진다*/
+                padding: 20px 0px 20px 50px; /*padding은 border 안쪽에 여백을 주는것이다*/
+
+            }
+            #s2 {
+                color: white;
+                width: 60%;
+                border: solid 10px black; /*solid는 실선 px은 두께 black은 선색깔*/
+                padding-left: 50px; /*한쪽만 조정가능*/
+                margin: 20px; /*margin은 border 기준 밖에 여백을 주는것이다*/
+            }
+            #s3 {
+                width: 500px; /*px은 절댓값이다*/
+                border-style: double; /*border은 테두리이다*/
+                border-width: 10px;
+                border-color: #1a573f; 
+                /*rgb는 레드 그린 블루 이다, #은 16진수로 표기*/
+                margin-left: 50px; /*margin: 0px 0px 0px 50px; 똑같은 결과값이다*/
+            }
+            #s4 {
+                border-color: blueviolet crimson forestgreen gold;
+                /*색,스타일 등 4개일때 시계방향으로 적용된다, 2개일때 위아래와 양옆이다*/
+                border-style: solid dashed;
+                border-width: 30px 0px 10px 0px;
+            }
+            #s5 {
+                /*border-left: solid 20px black;*/
+                border-style: none none none solid;
+                border-color: black;
+                border-width: 0px 0px 0px 20px;
+                padding: 10px 10px 10px 30px;
+                margin: 30px;
+
+            }
+            /*class에 디자인 적용, 클래스 이름은 중복 가능 */
+            .c1{
+                color: red;
+            }
+            header, footer {
+                background-color: lightskyblue;
+                padding: 15px;
+                text-align: center; /*글자 가운데 정렬 하겠다는 뜻, 상자안에있는 글자 이미지 모두 정렬*/
+            }
+            nav {
+                background-color: lightcoral;
+                padding: 20px;
+                margin: 5px 0px;
+                text-align: center;
+                color: red;
+                font-family: "돋움체"; /*글꼴 변경*/
+            }
+            ul{
+                list-style-type: square; /*리스트 스타일 바꾸는 것*/
+            }
+            ol{
+                list-style-type: lower-roman;
+            }
+
+        </style>
+            <!--이페이지 내에서만 사용할 디자인은 내부 스타일로 한다.-->
+    </head>
+    <body>
+        <header>
+            <img src="img/semantic.png">
+        </header>
+
+        <nav>
+            <a href="#s1">[Header]</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="#s2">[Nav]</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="#s3">[Section]</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="#s4">[Article]</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="#s5">[Aside]</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="#s6">[Footer]</a>
+        </nav>
+                <!--class는 동일한 이름이 적용이 가능,-->
+                <!--인라인 스타일 지정, 특별한 경우에만 사용-->
+        <section class="c1" id="s1" style="background-color: aqua;">
+            <h1>&lt;Header&gt;</h1>
+            <article>
+                <ol>
+                    <li>페이지나 섹션의 머리말 표현</li>
+                    <li>페이지 제목, 페이지를 소개하는 간단한 설명</li>
+                </ol>
+            </article>
+        </section>
+
+        <section class="c1" id="s2">
+            <h1>&lt;Nav&gt;</h1>
+            <article>
+                <ul>
+                    <li>하이퍼링크들을 모아 놓은 특별한 섹션</li>
+                    <li>페이지 내 목차를 만드는 용도</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="c1" id="s3">
+            <h1>&lt;Section&gt;</h1>
+            <article>
+                <ul>
+                    <li>문서의 장(chapter, section) 혹은 절을 구성하는 역할</li>
+                    <li>일반 문서에 여러 장이 있듯이 웹 페이지에 여러 &lt;section&gt;가능</li>
+                    <li>제목태그(&lt;h1&gt;~&lt;h6&gt;)를 사용하여 절 혹은 섹션의 주제 기입</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="s4">
+            <h1>&lt;Article&gt;</h1>
+            <article>
+                <ul>
+                    <li>본문과 연관 있지만, 독립적인 콘텐트를 담는 영역</li>
+                    <li>혹은 보조 기사, 블로그 포스트, 댓글 등 기타 독립적인 내용</li>
+                    <li>article에 담는 내용이 많은 경우 여러 section 둘 수 있음</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="s5">
+            <h1>&lt;Aside&gt;</h1>
+            <article>
+                <ul>
+                    <li>본문에서 약간 벗어난 노트나 팁</li>
+                    <li>신문, 잡지에서 주요 기사 옆 관련 기사, 삽입 어구로 표시된 논평 등</li>
+                    <li>페이지의 오른쪽이나 왼쪽에 주로 배치</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="s6">
+            <h1>&lt;Footer&gt;</h1>
+            <article>
+                <ul>
+                    <li>꼬리말 영역, 주로 저자나 저작권 정보</li>
+                </ul>
+            </article>
+        </section>
+
+        <aside>
+        </aside>
+
+        <footer>
+            &copy; 신라대학교 컴퓨터공학부 (46958) 부산광역시 사상구 백양대로 700번길 140
+        </footer>
+    </body>
+</html>

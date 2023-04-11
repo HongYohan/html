@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>컴퓨터공학부 202295035 홍요한</title>
+
+        <!--내부 디자인-->
+        <style>
+            *{
+                font-family: "맑은 고딕";
+                margin: 5px;
+            }
+
+            header, footer {
+                background-color: rgb(82, 253, 153);
+                text-align: center;
+                color: white;
+                padding: 20px;
+            }
+
+            nav {
+                background-color: rgb(132, 248, 252);
+                font-weight: bold;
+                text-align: center;
+                padding: 20px;
+                font-size: 18px;
+            }
+
+            h2 {
+                font-size: 20px;
+                color: black;
+            }
+
+            .c1 {
+                border-color: tomato;
+                border-style: solid;
+                border-width: 3px 3px 3px 9px;
+                padding: 10px;
+            }
+
+            .c2 {
+                border-color: pink;
+                border-style: solid;
+                border-width: 3px 3px 3px 9px;
+                padding: 10px;
+            }
+
+            .c3 {
+                border-color: skyblue;
+                border-style: solid;
+                border-width: 3px 3px 3px 9px;
+                padding: 10px;
+            }
+
+            .c4{
+                border-color: greenyellow;
+                border-style: solid;
+                border-width: 3px 3px 3px 9px;
+                padding: 10px;
+            }
+
+            article {
+                padding: 10px;
+            }
+
+            #a4{
+                color: green;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1>홍요한</h1>
+        </header>
+
+        <nav> <!--#은 내부 하이퍼 링크를 찾는 기호임-->
+            <a href="#s1">[개인정보]</a>&nbsp;&nbsp;
+            <a href="#s2">[학력사항]</a>&nbsp;&nbsp;
+            <a href="#s3">[자격사항]</a>&nbsp;&nbsp;
+            <a href="#s4">[자기소개]</a>
+        </nav>
+
+        <!--개인정보 영역-->
+        <section id="s1">
+            <h2 class="c1">개인정보</h2>
+            <article>
+                <img src="img/hongyohan.jpg" width="250"><!--width 가로픽셀 같은비율로 줄어든다-->
+                <ol>
+                    <li>본인성명 : 홍요한</li>
+                    <li>연락처 : 010-6747-8291</li>
+                    <li>E-mail : yohanhong0105@gmail.com</li>
+                    <li>주소 : 경상남도 거제시</li>
+                </ol>
+            </article>
+        </section>
+
+        <!--학력사항 영역-->
+        <section id="s2">
+            <h2 class="c2">학력사항</h2>
+            <article>
+                <ul>
+                    <li><img src="img/school04.png" width="15">신라대학교</li>
+                    <li><img src="img/school03.png" width="15">부산-고졸검정고시</li>
+                    <li><img src="img/school02.png" width="15">신현중학교</li>
+                    <li><img src="img/school01.png" width="15">양지초등학교</li>
+                </ul>
+            </article>
+        </section>
+
+        <!--자격사항 영역-->
+        <section id="s3">
+            <h2 class="c3">자격사항</h2>
+            <article>
+                <ul>
+                    <li>특수궤도장비운용자격증</li>
+                    <li>자동차 운전면허증</li>
+                    <li>한글,파워포인트,엑셀 자격증</li>
+                    <li>IELTS 6.0</li>
+                    <br>
+                    <li>정보처리기사</li>
+                    <li>정보보안기사</li>
+                    <li>데이터 분석 자격증</li>
+                    <li>CISSA</li>
+                </ul>
+            </article>
+        </section>
+
+        <!--자기소개 영역-->
+        <section id="s4">
+            <h2 class="c4">자기소개</h2>
+            <article id="a4">
+                <p>
+                    안녕하세요. 저는 이번에 22학번 신입생으로 들어온 홍요한 이라고 합니다.<br>
+                    원래 인생에 공부라는 선택지가 없었는데 군을 다니면서 '그래도 공부를 해봐야겠다' 라는 마음이 들어<br>
+                    더 늦기전에 대학교 지원을했고 여기 신라 대학교에 다닐수 있게 되었습니다.<br>
+                    비록 아직은 잘 모르고 배우는게 어려워도 하나씩 내 지식이 늘어간다는 마음이 들때마다 상당히 재미있습니다.<br>
+                    필요한 일이 있을때 불러주시면 제가 도와드릴수있는 부분은 도와드리겠습니다.
+                    <br>앞으로도 수업에 열심히 참여하겠습니다.
+                    <br><br><br>
+                    벚꽃 축제 보러 가고싶어요 :)
+                 </p>
+            </article>
+        </section>
+
+        <div>
+            <p><a href="#top">위로가기</a></p> <!--#top은 위로가기 이다.-->
+        </div>
+
+        <footer>
+            &copy; Hong Yohan
+        </footer>
+    </body>
+</html>

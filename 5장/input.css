@@ -1,0 +1,43 @@
+body {
+    padding : 10px;
+}
+
+label {
+    display : inline-block;
+    height : 10px;
+    width : 100px;
+}
+
+input[type=text], input[type=password], input[type=email], input[type=tel], input[type=date] {
+    width : 200px;
+    height : 40px;
+    border : 1px solid #8c8c8c;
+    padding :5px;
+    box-sizing : border-box;
+}
+
+#shcool_year1 label {
+    text-align: left;
+}
+#shcool_year2 label {
+    text-align: left;
+}
+#subject label{
+    text-align: left;
+    width : 150px;
+}
+#shcool_year2 select {
+    width : 200px;
+    height : 40px;
+}
+
+input[type=submit], input[type=reset] {
+    width : 200px;
+    height : 40px;
+    border-radius: 5px;
+    border-width: 0px;
+    padding :5px;
+    box-sizing : border-box;
+    background-color: skyblue;
+    box-shadow: 2px 2px rgb(61, 60, 60);
+}

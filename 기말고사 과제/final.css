@@ -1,0 +1,86 @@
+
+form {
+    width : 50%; 
+} 	
+
+label[for] {
+    display : inline-block ;
+    height : 30px;
+}  	 
+
+input[type=button]{
+    border-radius: 10px;
+    background-color : #a0c26b;
+    width : 45%;
+    border : none;
+    padding : 15px;
+    margin : 5px;
+    color : white ;
+}
+
+.box3-2 > input[type=button]{
+    border-radius: 10px;
+    background-color : #49586d;
+    width : 50px;
+    padding : 12px;
+    margin : 5px;
+    color : white ;
+    font-weight: bold;
+}
+
+#sel_year {
+    width : 250px;
+    height : 40px;
+    margin-right : 5px;
+    box-sizing: border-box;
+}	
+
+input[type=number] {
+    width : 100px;
+    height : 40px;
+    margin-right : 5px;
+    box-sizing: border-box;
+}	
+
+.box1 {
+    border-radius: 10px;
+    background-color : #a0c26b;
+    padding: 15px; 
+    margin : 5px;
+    width: 400px;
+    height: 25px; 
+    box-shadow : 3px 3px 3px black;
+}
+
+.box1 h1{
+    color : white;
+    font-size : 20px;
+    text-align : center;
+    margin : 0px;
+}
+
+.box2, .box3, .box4{
+    width : 450px;
+    padding : 10px;
+} 
+
+.box3-1, .box3-2 {
+    float: left;
+}
+
+.box3 {
+    clear: both;
+}
+
+.box3-1 {
+    width: 120px;
+}
+
+.red {
+    color : red;
+    font-weight : bold;
+}
+
+#result {
+    line-height: 40px;                
+}

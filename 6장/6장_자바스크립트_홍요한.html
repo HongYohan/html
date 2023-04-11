@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>컴퓨터 공학부 202295035 홍요한</title>
+
+    <style>
+        #msg {
+            border: 2px solid green;
+            width: 300px;
+            height: 50px;
+            padding: 10px;
+            margin-top: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+    </style>
+
+    <script>
+        // 페이지 로딩 시 자바스크립트 호출
+        //alert('페이지 방문을 환영합니다.');
+
+        // 버튼 클릭 시 호출되는 함수
+        function show() {
+            alert('안녕하세요. 버튼을 눌렀습니다.');
+        }
+
+        // 함수 호출하여 HTML DOM 요소 선택 메소드로 내용 변경, 덮어쓰기
+        function show1() {
+            // 문서에서 아이디가 pid1 인 것을 찾아서 내용을 변경하라.
+            document.getElementById("pid1").innerHTML = "첫 번째 영역 : getElementById 는 id 속성 이용합니다.";
+        }
+        function show2() {
+            // 이 문서에서 태그가 p인 것을 찾아 내용을 변경하라.
+            document.getElementsByTagName("p")[1].innerHTML = "두 번째 영역 : getElementsByTagName 은 태그 이름을 이용합니다.";
+        }
+        function show3() {
+            // 이 문서에서 클래스 이름이 pc2 인 것을 찾아 내용을 변경하라.
+            document.getElementsByClassName("pc2")[1].innerHTML = "세 번째 영역 : getElementsByClassName 은 class 속성 이용합니다. 반드시 주소 index는 0번지 부터입니다.";
+        }
+
+        // 자바 스크립트 출력 - 브라우저
+        // 메세지 창으로 출력
+        function hello1() {
+            alert("안녕하세요.");
+        }
+        // 문서에 쓰기(출력), 해당 문자로 문서가 다바뀜
+        function hello2() {
+            document.write("안녕하세요.");
+        }
+        // 콘솔창으로 출력(개발자 확인용)
+        function hello3() {
+            console.log("안녕하세요.");
+        }
+        // h2 영역에 포함하여 출력(덮어쓰기)
+        function hello4() {
+            document.getElementsByTagName("h2")[2].innerHTML = "안녕하세요.";
+        }
+
+        // 자바스크립트 인수와 매개변수
+        function variable(num) {
+            // num에 전달 받은 숫자가 1이면
+            // 첫 번째 영역에 "안녕하세요" 출력하라.
+            // 이 문서에서 아이디가 p1인 것을 찾아 "안녕하세요"라고 내용을 바꾸시오.
+            if(num == 1) {
+                document.getElementById("p1").innerHTML = "안녕하세요.";
+                document.getElementById("p2").innerHTML = "두 번째 영역";
+            }
+            else if(num == 2) { // 그렇지 않고 만약에..
+                document.getElementById("p1").innerHTML = "첫 번째 영역";
+                document.getElementById("p2").innerHTML = "안녕하세요.";
+            }
+        }
+
+        // 입력 요소 값 가져와서 화면에 출력 시키기
+        function input_val() {
+            // 변수 생성.
+            // 문자열을 저장하는 변수 str이라는 것을 만든다.
+            var str = "";   //선언, 초기화
+
+            // 사용자가 입력한 이름 값을 가지고 와서 str에 저장한다
+            str = myForm5.user_name.value + "님 환영합니다.";
+
+            document.getElementById("msg").innerHTML = str;
+        }
+    </script>
+</head>
+<body>
+    <h1>JAVASCRIPT 연습</h1>
+    <!--자바스크립트 호출-->
+    <h2>버튼으로 자바스크립트 호출</h2>
+
+    <form name="myForm1">
+        <input type="button" value="확인" onclick="show();">
+    </form>
+
+    <hr>
+    <!--html DOM 요소 선택 메소드-->
+    <h2>HTML DOM 요소 선택 메소드</h2>
+    <p class="pc1" id="pid1">
+        첫 번째 영역입니다.
+    </p>
+    <p class="pc2" id="pid2">
+        두 번째 영역입니다.
+    </p>
+    <p class="pc2" id="pid3">
+        세 번째 영역입니다.
+    </p>
+
+    <form name="myForm2">
+        <input type="button" value="첫 번째 영역" onclick="show1();">
+        <input type="button" value="두 번째 영역" onclick="show2()">
+        <input type="button" value="세 번째 영역" onclick="show3()">
+    </form>
+
+    <hr>
+    <!--출력 형태-->
+    <h2>자바스크립트 브라우저 출력 형태</h2>
+
+
+    <form name="myForm3">
+        <input type="button" value="alert" onclick="hello1()">
+        <input type="button" value="write" onclick="hello2()">
+        <input type="button" value="consol.log" onclick="hello3()">
+        <input type="button" value="innerHTML" onclick="hello4()">
+    </form>
+
+    <hr>
+
+    <!--자바스크립트 인수와 매개변수-->
+    <h2>자바스크립트 인수와 매개변수</h2>
+    <p id="p1">
+        첫 번째 영역
+    </p>
+    <p id="p2">
+        두 번째 영역
+    </p>
+
+    <form name="myForm4">
+        <input type="button" value="첫번째 영역" onclick="variable(1)">
+        <input type="button" value="두번째 영역" onclick="variable(2)">
+    </form>
+
+    <hr>
+
+    <!--입력 요소 값 출력하기-->
+    <h2>자바스크립트 입력 요소 변수에 저장하여 출력</h2>
+
+    <form name="myForm5">
+        <input type="text" name="user_name" id="user_name" placeholder="이름 입력">
+        <input type="button" value="확인" onclick="input_val()">
+        <input type="reset" value="취소">
+    </form>
+
+    <!--이름 입력 내용 출력 영역-->
+    <div id="msg">
+        
+    </div>
+</body>
+</html>

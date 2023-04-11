@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>컴퓨터 공학부 202295035 홍요한</title>
+    <style>
+        .title {
+            background-color: green ;
+            width: 400px;
+            height: 80px;
+            box-sizing: border-box;
+            color: white;
+            text-align: center;
+            border-radius: 10px;
+            margin: 5px;
+            padding-top: 1px;
+        }
+
+        #result {
+            border: 3px solid greenyellow;
+            width: 400px;
+            height: 80px;
+            box-sizing: border-box;
+            margin: 5px;
+            color: black;
+            text-align: center;
+            padding: 10px;
+            font-size: 30px;
+            border-radius: 10px;
+        }
+
+        .d1 {
+            float: left;
+            margin: 5px;
+        }
+
+        .d2 {
+            clear: both;
+            color: red;
+            width: 350px;
+            height: 25px;
+            box-sizing: border-box;
+            background-color: greenyellow;
+            box-sizing: border-box;
+            padding-left: 10px;
+            font-size: 16px;
+        }
+        /*폼 전체*/
+        #main {
+            width: 400px;
+            height: 150px;
+            border: 3px solid greenyellow;
+            box-sizing: border-box;
+            padding: 10px;
+            margin: 5px;
+        }
+
+        input[type=text] {
+            width: 80px;
+            height: 40px;
+            box-sizing: border-box;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        input[type=button] {
+            width: 50px;
+            height: 40px;
+            box-sizing: border-box;
+        }
+    </style>
+
+    <script>
+        function result1() {
+            // 공백
+            if (myform.num1.value == "") {
+                alert("첫 번째 숫자를 입력하시오.")
+                myform.reset()
+                document.getElementById("result").innerHTML = "";
+            }
+            else if (myform.user_op.value == "") {
+                alert("연산자를 입력하시오.")
+                myform.reset()
+                document.getElementById("result").innerHTML = "";
+            }
+            else if (myform.num2.value == "") {
+                alert("두 번째 숫자를 입력하시오.")
+                myform.reset()
+                document.getElementById("result").innerHTML = "";
+            }
+            
+            // =
+            var num1 = parseInt(myform.num1.value);
+            var num2 = parseInt(myform.num2.value);
+            var result =0;
+
+            switch (myform.user_op.value) {
+                case "+" :
+                    result = num1 + num2
+                    break;
+                case "-" :
+                    result = num1 - num2
+                    break;
+                case "x" :
+                    result = num1 * num2
+                    break;
+                case "/" :
+                    result = num1 / num2
+                    break;
+            }
+            var op = "";
+
+
+            if (myform.use_op.checked == true) {
+                op= num1 + myform.user_op.value +num2+ "=" + result;
+            }
+            else {
+                op = result;
+            }
+                document.getElementById("result").innerHTML= op
+        }
+
+        // 취소 함수
+        function reset1() {
+            myform.reset();
+            document.getElementById("result").innerHTML = "";
+        }
+
+    </script>
+</head>
+<body>
+    <div class="title">
+        <h1>간단한 계산기</h1>
+    </div>
+    <form name="myform">
+        <div id="main">
+            <div class="d1">
+                <input type="text" name="num1" id="num1" size="5">
+            </div>
+
+            <div class="d1">
+                <label>
+                <input type="radio" name="user_op" id="user_plus" value="+">+
+                </label><br>
+                <label>
+                <input type="radio" name="user_op" id="user_minus" value="-">-
+                </label><br>
+                <label>
+                <input type="radio" name="user_op" id="user_multiple" value="x">x
+                </label><br>
+                <label>
+                <input type="radio" name="user_op" id="user_division" value="/">/
+                </label>
+            </div>
+
+            <div class="d1">
+                <input type="text" name="num2" id="num2" size="5">
+            </div>
+
+            <div class="d1">
+                <input type="button" value="=" onclick="result1()">
+                <input type="button" value="취소" onclick="reset1()">
+            </div>
+
+            <div class="d2">
+                <label>
+                <input type="checkbox" name="use_op" id="use_op" value=""> 수식포함
+                </label>
+            </div>
+        </div>
+        <div class="title">
+            <h1>계산 결과</h1>
+        </div>
+        
+        <div id="result"><p></p></div>
+    </form>
+</body>
+</html>

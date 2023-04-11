@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>컴퓨터공학부 202295035 홍요한</title>
+    </head>
+    <body>
+        <header> <!--시맨틱테그의 헤더이다, 페이지 제목 작성-->
+            <img src="img/semantic.png">
+        </header>
+
+        <nav> <!--메뉴 작성-->
+            <!--하이퍼링크이 #은 그 아이디(내부 하이퍼링크)를 찾는것-->
+            <a href="#s1">[Header]</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp; <!--&nbsp;는 띄어쓰기 1칸이다-->
+            <a href="#s2">[Nav]</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="#s3">[Section]</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="#s4">[Article]</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="#s5">[Aside]</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="#s6">[Footer]</a> <!--블럭지정한 태그는 드래그로 옮길수있다-->
+        </nav>
+
+        <section id="s1"> <!--내용 정리 구역-->
+            <h1>&lt;Header&gt;</h1>
+            <article> <!--콘텐츠 영역-->
+                <ul>
+                    <li>페이지나 섹션의 머리말 표현</li>
+                    <li>페이지 제목, 페이지를 소개하는 간단한 설명</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="s2">
+            <h1>&lt;Nav&gt;</h1>
+            <article>
+                <ul>
+                    <li>하이퍼링크들을 모아 놓은 특별한 섹션</li>
+                    <li>페이지 내 목차를 만드는 용도</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="s3">
+            <h1>&lt;Section&gt;</h1>
+            <article>
+                <ul>
+                    <li>문서의 장(chapter, section) 혹은 절을 구성하는 역할</li>
+                    <li>일반 문서에 여러 장이 있듯이 웹 페이지에 여러 &lt;section&gt;가능</li>
+                    <li>제목태그(&lt;h1&gt;~&lt;h6&gt;)를 사용하여 절 혹은 섹션의 주제 기입</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="s4">
+            <h1>&lt;Article&gt;</h1>
+            <article>
+                <ul>
+                    <li>본문과 연관 있지만, 독립적인 콘텐트를 담는 영역</li>
+                    <li>혹은 보조 기사, 블로그 포스트, 댓글 등 기타 독립적인 내용</li>
+                    <li>article에 담는 내용이 많은 경우 여러 section 둘 수 있음</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="s5">
+            <h1>&lt;Aside&gt;</h1>
+            <article>
+                <ul>
+                    <li>본문에서 약간 벗어난 노트나 팁</li>
+                    <li>신문, 잡지에서 주요 기사 옆 관련 기사, 삽입 어구로 표시된 논평 등</li>
+                    <li>페이지의 오른쪽이나 왼쪽에 주로 배치</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="s6">
+            <h1>&lt;Footer&gt;</h1>
+            <article>
+                <ul>
+                    <li>꼬리말 영역, 주로 저자나 저작권 정보</li>
+                </ul>
+            </article>
+        </section>
+
+        <aside> <!--광고 영역 / 이 페이지에는 없음-->
+        </aside>
+
+        <footer> <!--꼬리말-->
+            &copy; 신라대학교 컴퓨터공학부 (46958) 부산광역시 사상구 백양대로 700번길 140 <!--&copy;는 저작권-->
+        </footer>
+    </body>
+</html>

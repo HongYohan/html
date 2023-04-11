@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>컴퓨터 공학부 202295035 홍요한</title>
+
+    <style>
+        .B_box1 {
+            background-color: green;
+            border-radius: 10px;
+            box-shadow: 3px 3px gray;
+            width: 400px;
+            height: 65px;
+            padding: 5px;
+            margin: 10px;
+            box-sizing: border-box;
+        }
+
+        .B_box1 h1 {
+            text-align: center;
+            color: white;
+            font-size: 30px;
+            margin: 4px; /*글자가 위나 아래에 붙어있을때 margin 사용!*/
+        }
+
+        .B_box2, .B_box3 {
+            width: 400px;
+            padding: 5px;
+        }
+
+        /**/
+        input[type=submit], input[type=reset] {
+            background-color: green;
+            border-radius: 5px; /*테두리 둥글게*/
+            border-style: none;
+            box-shadow: 2px 2px black; /*shadow 그림자*/
+            width: 43%;
+            height: 40px;
+            margin: 10px;
+            color: white;
+        }
+
+        input[type=text], input[type=email] {
+            width: 100%;
+            height: 40px;
+            padding: 5px;
+            margin: 10px;
+            box-sizing: border-box;
+        }
+
+        #user_year, #user_month, #user_day {
+            width: 27%;
+            height: 40px;
+            padding: 5px;
+            margin: 10px;
+            box-sizing: border-box;
+        }
+        
+        .ss_box {
+            border: 1px solid gray;
+            width: 100%;
+            height: 45px;
+            padding: 10px;
+            margin: 10px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            margin: 10px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <form name="hyh" method="get" action="result.html">
+        <!--제목 영역-->
+        <div class="B_box1">
+            <h1>개인 신청 자료</h1>
+        </div>
+
+        <!--폼 입력 영역-->
+        <div class="B_box2">
+            <!--성명-->
+            <div class="s_box">
+                <label for="user_name">성명</label><br> <!--id만 유일한 이름이면 된다-->
+                <input type="text" id="user_name" name="user_name" placeholder="성명 입력" required>
+            </div>
+
+            <!--Email-->
+            <div class="s_box">
+                <label for="user_mail">E-mail</label><br>
+                <input type="email" id="user_mail" name="user_mail" placeholder="Email 입력" required>
+            </div>
+
+            <!--생년월일-->
+            <div class="s_box">
+                <label for="user_year">생년월일</label><br>
+                <input type="number" id="user_year" name="user_year" placeholder="년" required>
+                <select id="user_month" name="user_month">
+                    <option value="">월</option>
+                    <option value="1">1월</option>
+                    <option value="2">2월</option>
+                    <option value="3">3월</option>
+                    <option value="4">4월</option>
+                    <option value="5">5월</option>
+                    <option value="6">6월</option>
+                    <option value="7">7월</option>
+                    <option value="8">8월</option>
+                    <option value="9">9월</option>
+                    <option value="10">10월</option>
+                    <option value="11">11월</option>
+                    <option value="12">12월</option>
+                </select>
+                <input type="text" id="user_day" name="user_day" placeholder="일" required>
+                <!--TYPE이 text이기에 문자열로 된다-->
+                
+            </div>
+
+            <!--성별-->
+            <div class="s_box">
+                <label>성별</label><br>
+                <div class="ss_box">
+                    <input type="radio" id="m_gender" name="user_gender" value="남자">
+                    <label for="m_gender">남자</label>
+                    <input type="radio" id="w_gender" name="user_gender" value="여자">
+                    <label for="w_gender">여자</label>
+                </div>
+            </div>
+
+            <!--관심분야-->
+            <div class="s_box">
+                <label>관심분야</label><br>
+                <div class="ss_box">
+                    <input type="checkbox" id="ck_c" name="ck_c" value="C언어">
+                    <label for="ck_c">C언어</label>
+                    <input type="checkbox" id="ck_py" name="ck_py" value="파이썬">
+                    <label for="ck_py">파이썬</label>
+                    <input type="checkbox" id="ck_web" name="ck_web" value="웹제작">
+                    <label for="ck_web">웹제작</label>
+                    <input type="checkbox" id="ck_meta" name="ck_meta" value="메타버스">
+                    <label for="ck_meta">메타버스</label>
+                </div>
+            </div>
+
+            <!--기타-->
+            <div class="s_box">
+                <label for="user_content">기타</label><br>
+                <textarea id="user_content" name="user_content" cols="30" rows="5"></textarea>
+            </div>
+
+        </div>
+
+        <!--버튼 영역-->
+        <div class="B_box3">
+            <input type="submit" value="확인">
+            <input type="reset" value="취소">
+        </div>
+    </form>
+</body>
+</html>

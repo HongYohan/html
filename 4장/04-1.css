@@ -1,0 +1,93 @@
+/*문서전체*/
+* {
+    font-family: "맑은 고딕";
+    margin: 5px;
+}
+
+/*header, footer*/
+header, footer {
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(161, 255, 255);
+}
+
+/*nav*/
+nav {
+    padding: 20px;
+    background-color: rgb(218, 228, 224);
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+a {
+    display: inline-block;
+    /*background-color: red */
+    padding: 10px;
+    width: 100px;
+    height: 20px;
+    text-decoration: none;
+}
+
+a:link, a:visited {
+    color: black;
+}
+
+a:hover, a:active {
+    color: white;
+    text-decoration: underline;
+}
+
+/*section*/
+section {
+    background-color: rgb(255, 220, 226);
+    border: solid 3px rgb(122, 47, 47);
+    float: left;
+    width: 47%;
+    height: 200px;
+}
+
+/*c1*/
+.c1 {
+    background-color: rgb(226, 114, 114);
+    color: white;
+    padding: 10px;
+}
+
+#s1 h1{
+    background-color: blueviolet;
+}
+#s2 h1{
+    background-color: pink;
+}
+#s3 h1{
+    background-color: orange;
+}
+#s4 h1{
+    background-color: greenyellow;
+}
+#s5 h1{
+    background-color: skyblue;
+}
+#s6 h1{
+    background-color: green;
+}
+
+/*article*/
+article {
+    padding: 10px 0px;
+}
+
+/*ol*/
+ol {
+    list-style-type: upper-roman;
+}
+
+/*ul*/
+ul {
+    list-style-type: square;
+}
+
+footer {
+    clear: both;
+}

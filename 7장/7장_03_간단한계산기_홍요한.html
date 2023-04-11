@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>자바스크립트 연산자와 조건문 : 자기 이름</title>
+		<style>
+			input[type=button]{
+				width : 80px;
+				height : 30px;
+				border: none;
+				background-color: rgb(215, 233, 184);
+			}
+			/* 전체 영역 */
+			.box { 
+				border: 2px solid #73AD21;
+				padding: 20px; 
+				margin : 10px;
+				width: 600px;
+				height : 80px;
+				text-align : center;
+				box-sizing: border-box;
+			}		
+			/* 숫자 입력 상자와 연산자 선택 영역 */
+			.pc1 {
+				width : 100px;
+				height : 25px;
+				float : left ;
+			}
+			.pc2 {
+				width : 50px;
+				height : 25px;
+				float : left ;
+			}
+		
+			#num1, #num2, #op {
+				height : 25px;
+				text-align : center;
+			}
+			
+			#op {
+				width : 50px;
+				font-size : 20px;
+				height : 30px;
+			}
+			
+			/* 결과 출력 메세지 영역 */
+			#result {
+				width : 80px;
+				height : 30px;
+				text-align : center;
+				border : 1px solid green;
+				float : left ;
+				margin-right : 20px;
+				margin-left : 10px;
+				margin-right : 10px;
+				font-size : 20px;
+			}
+		</style>
+			
+		<script>
+			function calShow() {
+				var num1 = parseInt(myform.num1.value);
+				var num2 = parseInt(myform.num2.value);
+				
+				// 계산 결과 저장 변수 선언.
+				var result = 0; // 숫자가 저장되는 변수
+
+				//사용자가 선택한 연산자에 따라 계산하기.
+				//만약에 연산자가 +,-,*,/
+				/*if (myform.op.value == "+") {
+					result = num1 + num2;
+				}
+				else if (myform.op.value == '-') {
+					result = num1-num2;
+				}
+				else if (myform.op.value == 'x') {
+					result= num1 * num2;
+				}
+				else if (myform.op.value == '/') {
+					result = num1 / num2;
+				}*/
+
+				//연산자에 따른 결과 계산 switch case
+				switch (myform.op.value) {
+					case "+" :
+						result=num1+num2
+						break;
+					case "-" :
+						result=num1-num2
+						break;
+					case "x" :
+						result=num1*num2
+						break;
+					case "/" :
+						result=num1/num2
+						break;
+				}
+
+				//결과 출력
+				//아이디가 result인 곳에 출력하시오.
+				document.getElementById("result").innerHTML = result;
+			}
+
+			// 다시하기 버튼 호출 함수=초기화함수
+			function clearShow() {
+				//myform 전체 입력 값 지우기.
+				myform.reset();
+				// id가 result인 div 영역을 빈칸으로 만듬
+				document.getElementById("result").innerHTML = "";
+			}
+		</script>
+	</head>
+	
+	<body>
+		<form name="myform">
+			<h1>계산기</h1>
+			<div class ="box">		
+				<div class="pc1">
+					<input type="text" name="num1" id="num1" placeholder="숫자1" size="5">
+				</div>	
+
+				<div class="pc2">
+					<select name="op" id="op">
+						<option value="+">+</option>
+						<option value="-">-</option>
+						<option value="x">x</option>
+						<option value="/">/</option>			
+					</select>
+				</div>
+				
+				<div class="pc1">
+					<input type="text" name="num2" id="num2" placeholder="숫자2" size="5">
+				</div>	
+				
+				<div class="pc1">
+					<input type="button" value="=" onclick="calShow();">
+				</div>
+				
+				
+				<div>
+					<div id="result"></div>
+				</div>
+				<div class="pc1">
+					<input type="button" value="다시 계산" onclick="clearShow();">
+				</div>
+			</div>
+	</body>
+</html>

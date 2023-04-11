@@ -1,0 +1,65 @@
+form {
+    width : 600px;
+}
+
+h1 {
+    background-color : pink;
+    border-radius : 10px;
+    box-shadow : 3px 3px 3px black;
+    width : 600px;
+    height : 65px;
+    padding : 5px;
+    text-align : center;
+    color : white;
+    box-sizing : border-box;
+}
+
+article > p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+input[type=button], input[type=reset] {
+    background-color : skyblue;
+    border-radius : 10px;
+    width : 49%;
+    height : 50px;
+    color : white;
+    font-weight : bold;
+    font-size : 16pt;
+    border : none;
+    box-shadow : 3px 3px 3px gray;
+}
+
+.box1, select {
+    border : 1px solid gray;
+    width : 90%;
+    height : 45px;
+    padding : 10px;
+    margin : 10px;
+    box-sizing: border-box;
+    font-size : 18px;
+}
+
+textarea {
+    width : 90%;
+    height : 100px;
+    padding : 10px;
+    margin : 10px;
+    font-size : 13pt;
+    font-family : "맑은 고딕";
+    box-sizing: border-box;
+}
+
+footer {
+    background-color: pink;
+    width: 600px;
+    height: 70px;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 3px;
+    margin-top: 20px;
+    box-sizing: border-box;
+}

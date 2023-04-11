@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+
+    <link rel="stylesheet" type="text/css" href="input.css">
+</head>
+<body>
+    <header>
+        <h1>HTML 입력 양식</h1>
+    </header>
+
+    <nav></nav>
+
+    <section> <!--post는 보안 get은 입력창에 모든내용이 보이는것-->
+        <form name="myform" method="post" action="result.html">
+            <!--한줄 텍스트 입력-->
+            <div id="name"> <!--id와 label for을 연결, 즉 이름을 클릭하면 이름칸에 커서가 간다-->
+                <label for="user_name">[이름] : </label>
+                <input type="text" id="user_name" name="user_name" placeholder="이름을 입력하시오." required>
+                <!--placeholder 힌트, required 필수적으로 입력-->
+            </div>
+            <br><br>
+
+            <!--비밀번호 입력, maxlength는 입력할수있는 최대 길이이다.-->
+            <div id="pw">
+                <label for="user_pwd">[비밀번호] : </label>
+                <input type="password" id="user_pwd" name="user_pwd" placeholder="비밀번호를 입력하시오." maxlength="10">
+            </div>
+            <br><br>
+
+            <!--E-mail 입력, autofocus 선택을 하지 않아도 자동으로 focus가 된다-->
+            <div id="email">
+                <label for="user_mail">[E-mail] : </label>
+                <input type="email" id="user_mail" name="user_mail" placeholder="E-mail을 입력하시오." autofocus>
+            </div>
+            <br><br>
+
+            <!--라디오 버튼, name은 그룹명이라고 생각해야함-->
+            <div id="school_year1">
+                [학년] :
+                <input type="radio" name="garade" id="grade1" value="1학년" checked>1학년
+                <input type="radio" name="garade" id="grade2" value="2학년">2학년
+
+                <input type="radio" name="garade" id="grade3" value="3학년">
+                <label for="grade3">3학년</label>
+                <input type="radio" name="garade" id="grade4" value="4학년">
+                <label for="grade4">4학년</label>
+            </div>
+            <br><br>
+
+            <!--체크 박스 영역, value는 전달되는 값, name은 다다르게 설정-->
+            <div id="subject">
+                [신청 과목] : 
+                <input type="checkbox" name="sub_c" id="sub_c" value="C-Programing">
+                <label for="sub_c">C언어</label>
+                <input type="checkbox" name="sub_py" id="sub_py" value="Python">
+                <label for="sub_py">파이썬</label>
+                <input type="checkbox" name="sub_web" id="sub_web" value="Web-Programing">
+                <label for="sub_web">웹제작</label>
+                <input type="checkbox" name="sub_sw" id="sub_sw" value="SW-Programing">
+                <label for="sub_sw">S/W 프로그래밍</label>
+            </div>
+            <br><br>
+
+            <!--셀렉트 영역-->
+            <div id="school_year2">
+                <label for="grade">[학년 선택] : </label>
+                <select name="grade" id="grade">
+                    <option value="1">1학년</option>
+                    <option value="2">2학년</option>
+                    <option value="3" selected>3학년</option>
+                    <option value="4">4학년</option>
+                </select>
+            </div>
+            <br><br>
+
+            <!--날짜 선택 영역-->
+            <div id="date">
+                <label for="re_date">[과제 제출일] : </label>
+                <input type="date" id="re_date" name="re_date">
+            </div>
+            <br><br>
+
+            <!--전화번호 영역-->
+            <div id="tel">
+                <label for="user_tel">[전화번호] : </label>
+                <input type="tel" name="user_tel" id="user_tel" placeholder="전화번호를 입력하시오.">
+            </div>
+            <br><br>
+
+            <!--여러줄 텍스트 입력 영역, cols는 칸 rows는 줄이다.-->
+            <div id="infp">
+                <label for="user_info">[자기소개] : </label>
+                <textarea name="user_info" id="user_info" cols="30" rows="5"></textarea>
+            </div>
+            <br><br>
+
+            <!--확인/취소 번튼 영역-->
+            <input type="submit" value="확인">  <!--submit 제출하는 것 value로 제출에서 확인로 명칭을 바꿈-->
+            <input type="reset" value="취소">   <!--reset 초기화하는 것 value로 초기화에서 취소로 명칭을 바꿈-->
+
+
+
+        </form>
+    </section>
+
+    <aside></aside>
+
+    <footer>
+        &copy; 컴퓨터 공학부 202295035 홍요한
+    </footer>
+</body>
+</html>

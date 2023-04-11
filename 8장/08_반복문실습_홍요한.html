@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>반복문</title>
+		
+		<style>
+			.dc1 {
+				float : left ;
+				padding : 20px;
+			}
+			
+			.result {
+				width : 60px;
+				height : 300px;
+				text-align : center;
+				border : 1px solid green;
+				margin-top : 20px;
+				padding : 20px;
+				font-size : 20px;
+			}		
+		</style>
+
+		<script>			
+			function show() {
+				// 이 문서에서 아이디가 result인 곳에 내 이름 10개 출력하기
+				document.getElementById("result").innerHTML = "홍요한<br>홍요한<br>홍요한<br>홍요한<br>홍요한<br>홍요한<br>홍요한<br>홍요한<br>홍요한<br>홍요한<br>";
+			}
+			
+			function show1() {
+				// 변수 선언.
+				var result = ""; // 결과 저장 변수
+
+				// 반복하면서 1부터 10까지 result 변수에 저장.
+				for(var i = 1; i <= 10; i++) { // i는 지역변수 이다.
+					result = result + i + "<br>";
+				}
+				
+				// 반복이 종료되면 result에 저장된 모든 값을 출력.
+				// 아이디가 result1인 곳에 result를 출력하시오.
+
+				document.getElementById("result1").innerHTML = result;
+			}
+
+			function show2() {
+				// 결과 저장 변수
+				var result ="";
+
+				// 초기값
+				var i=1;
+				while (i<=10) { // 10까지
+					result =result + i+"<br>";
+					i++; // 증강식
+				}
+				// 아이디가 result2인 곳에 result를 출력하시오.
+				document.getElementById("result2").innerHTML = result;
+			}
+
+			function show3() {
+				// 결과 저장 변수
+				var result ="";
+
+				// 초기값
+				var i=1;
+				do {
+					result =result + i+"<br>";
+					i++; // 증강식
+				}
+				while (i<=10);
+				// 아이디가 result3인 곳에 result를 출력하시오.
+				document.getElementById("result3").innerHTML = result;
+			}
+		</script>
+	</head>
+
+	
+	
+	<body>
+		<form name="myform">
+			<div> <!-- Html & JavaScript 반복 출력 -->
+				<input type="button" value="반복문 실행" onclick="show()">	
+				<br>
+				<!--결과 출력 영역-->
+				<div id="result"></div>
+			</div>
+			
+			<div class="dc1"> <!-- for 반복문 실행 -->
+				<input type="button" value="반복문 - for" onclick="show1()">	
+				<br>
+				<!--결과 출력 영역-->
+				<div id="result1" class="result"></div>
+			</div>
+			
+			<div class="dc1"> <!-- while 반복문 실행 -->
+				<input type="button" value="반복문 - while" onclick="show2()">	
+				<br>
+				<!--결과 출력 영역-->
+				<div id="result2" class="result"></div>
+			</div>
+			
+			<div class="dc1"> <!-- do while 반복문 실행 -->
+				<input type="button" value="반복문 - do while" onclick="show3()">	
+				<br>
+				<!--결과 출력 영역-->
+				<div id="result3" class="result"></div>
+			</div>			
+		</form>
+	</body>
+</html>
